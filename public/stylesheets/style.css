@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  /* background: url("https://i.imgur.com/DwefNwp.png") no-repeat center center
+    fixed;
+  background-size: cover; */
+  background-color: #BDE6E6;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
+header > a {
+  margin: 20px;
+  color: #821630;
+  text-decoration: none;
+  padding: 10px;
+}
+
+header > a:hover {
+  color: #da8196;
+}
+
+/* header > a.active {
+  color: #821630;
+} */
+
+header > img {
+  width: 42px;
+  object-fit: contain;
+  margin-right: auto;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+}
+
+.login img {
+  height: 30px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.title {
+  margin-left: 8rem;
+  font-family: "Moul";
+  font-size: 2rem;
+  color: #821630;
+  letter-spacing: 2px;
+}
+
+/* HERO SCREEN */
+
+.hero-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+}
+
+.hero-screen h1 {
+  font-family: "Moul";
+  font-size: 3rem;
+  margin-bottom: 0;
+  color: #821630;
+  letter-spacing: 2px;
+}
+
+.hero-screen h3 {
+  font-size: 1.6rem;
+  margin-top: 0;
+  color: #da8196;
+  letter-spacing: 4px;
+}
+
+.hero-screen a {
+  background-color: #edf4e2;
+  color: #821630;
+  border-radius: 100px;
+  text-decoration: none;
+  font-family: "Poppins";
+  margin-top: 2.4rem;
+  text-align: center;
+  padding: 1rem 3rem;
+}
+
+.hero-screen a:hover {
+  background-color: #da8196;
+  color: #edf4e2;
+}
+
+/* FIRST PAGE */
+
+.first-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
