@@ -3,6 +3,7 @@ const router = express.Router();
 // const fetch = require('node-fetch');
 // const token = process.env.MAPBOX;
 const playgroundsCtrl = require("../controllers/playgrounds");
+const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 //GET /playgrounds
 router.get("/", playgroundsCtrl.index);

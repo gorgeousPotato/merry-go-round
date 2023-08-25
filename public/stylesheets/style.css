@@ -135,4 +135,29 @@ header > img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, auto);
+  gap: 1rem;
+}
+
+/* REVIEWS PAGE */
+
+.reviews-page {
+  margin-left: 8rem;
+}
+
+.reviews-table {
+  width:90%;
+  display: grid;
+  grid-template-columns: 3fr 2fr 6fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.review-user {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.review-user img {
+  border-radius: 50%;
+  height: 40px;
 }

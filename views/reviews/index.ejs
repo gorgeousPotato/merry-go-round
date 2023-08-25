@@ -1,0 +1,51 @@
+<%- include("../partials/header") %>
+<h2 class="title"><%= playground.title %> reviews</h2>
+<div class="reviews-page">
+  <% if (user) {%>
+    <form action="/playgrounds/<%= playground._id %>/reviews" method="POST">
+      <label>Review</label>
+      <textarea name="content"></textarea>
+      <label>Rating</label>
+      <select name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5</option>
+      </select>
+      <input type="submit" value="Add Review" />
+    </form>
+    <% } %>  
+     <% if (playground.reviews.length) { %>
+    <div class="reviews-table">
+      <h4>User</h4>
+      <h4>Date</h4>
+      <h4>Review</h4>
+      <h4>Rating</h4>
+      <div></div>
+      <% let total=0 %> 
+      <% playground.reviews.forEach(review => {%> 
+      <% total += review.rating %>
+      <div class="review-user"> 
+        <img alt="avatar" src="<%= review.userAvatar %>"  referrerpolicy="no-referrer"/>
+        <p><%= review.userName %></p>
+      </div>
+      <p><%= review.createdAt.toLocaleDateString() %></p>
+      <p><%= review.content %></p>
+      <p><%= review.rating %></p>
+      <% if (user?._id.equals(review.user)) { %>
+        <form class="flex-center" action="/reviews/<%= review._id %>?_method=DELETE" method="POST"> 
+          <button type="submit">X</button>
+        </form>
+      <% } else { %>
+        <div></div>
+      <% }%>
+      <% }) %>
+    </div>
+    <p>Total: <%= (total / playground.reviews.length).toFixed(1) %></p>
+    <% } else { %> 
+      <h3>No Reviews Yet</h3>
+    <% } %>
+</div>
+
+<%- include("../partials/footer") %>
