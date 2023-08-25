@@ -10,7 +10,7 @@ body {
   /* background: url("https://i.imgur.com/DwefNwp.png") no-repeat center center
     fixed;
   background-size: cover; */
-  background-color: #BDE6E6;
+  background-color: #bde6e6;
 }
 
 header {
@@ -116,4 +116,23 @@ header > img {
   justify-content: space-around;
 }
 
+.first-page a {
+  text-decoration: none;
+  color: #400311;
+}
 
+.first-page a:hover {
+  color: #da8196;
+}
+
+.all-pg-page {
+  align-self: flex-start;
+}
+
+/* SHOW PAGE */
+
+.equip-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+}

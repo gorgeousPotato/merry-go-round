@@ -1,0 +1,31 @@
+<%- include("../partials/header") %>
+<h1 class="title"><%= title %></h1>
+<form action="/playgrounds" method="POST">
+  <label>Name</label>
+  <input type="text" name="title" />
+  <br />
+  <label>Minumum Age</label>
+  <input type="number" min="0" name="minAge" />
+  <br />
+  <label>Slides</label>
+  <input type="checkbox" name="slides" />
+  <br />
+  <label>Swings</label>
+  <input type="checkbox" name="swings" />
+  <br />
+  <label>Sandbox</label>
+  <input type="checkbox" name="sandbox" />
+  <br />
+  <label>Spraypark</label>
+  <input type="checkbox" name="spraypark" />
+  <br />
+  <label>Lat - for now manual</label>
+  <input type="number" name="lat" />
+  <br />
+  <label>Lon - for now manual</label>
+  <input type="number" name="lon" />
+  <br />
+  <button type="submit">SAVE</button>
+</form>
+
+<%- include("../partials/footer") %>
