@@ -145,7 +145,7 @@ header > img {
 }
 
 .reviews-table {
-  width:90%;
+  width: 90%;
   display: grid;
   grid-template-columns: 3fr 2fr 6fr 1fr 1fr;
   gap: 1rem;
@@ -160,4 +160,15 @@ header > img {
 .review-user img {
   border-radius: 50%;
   height: 40px;
+}
+
+/* MAP */
+
+.marker {
+  background-image: url("https://i.imgur.com/0UV6RQc.png");
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
 }
