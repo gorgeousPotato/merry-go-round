@@ -2,18 +2,18 @@
 <h2 class="title"><%= playground.title %> reviews</h2>
 <div class="reviews-page">
   <% if (user) {%>
-    <form action="/playgrounds/<%= playground._id %>/reviews" method="POST">
-      <label>Review</label>
-      <textarea name="content"></textarea>
-      <label>Rating</label>
+    <form action="/playgrounds/<%= playground._id %>/reviews" method="POST" class="review-form">
+      <label>Review</label> <br>
+      <textarea name="content" rows="2" cols="80"></textarea> <br>
+      <label>Rating &nbsp;&nbsp;</label>
       <select name="rating">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5" selected>5</option>
-      </select>
-      <input type="submit" value="Add Review" />
+      </select> <br>
+      <input type="submit" value="Add Review" class="submit-btn"/>
     </form>
     <% } %>  
      <% if (playground.reviews.length) { %>

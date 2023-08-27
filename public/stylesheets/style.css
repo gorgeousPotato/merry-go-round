@@ -140,11 +140,60 @@ header > img {
 
 /* REVIEWS PAGE */
 
+.review-form textarea {
+  border-radius: 2px;
+  border: none;
+  background-color: #edf4e2;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #0b0103
+}
+
+.review-form textarea:focus {
+  background-color: #fceff2;
+  border: none;
+}
+
+.review-form label {
+  font-size: 1rem;
+  color:#0b0103
+}
+
+.review-form select {
+  border-radius:2px;
+  border: none;
+  background-color: #edf4e2;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #0b0103
+}
+
+.submit-btn {
+  background-color: #da8196;
+  color: #edf4e2;
+  border-radius: 100px;
+  border:none;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  padding: 0.4rem 3rem;
+}
+
+.submit-btn:hover {
+  background-color: #edf4e2;
+  color: #821630;
+  
+}
+
 .reviews-page {
   margin-left: 8rem;
+
 }
 
 .reviews-table {
+  margin-top: 2rem;
   width: 90%;
   display: grid;
   grid-template-columns: 3fr 2fr 6fr 1fr 1fr;
@@ -165,11 +214,10 @@ header > img {
 /* MAP */
 
 .marker {
-  /* background-image: url("https://i.imgur.com/hjECJnQ.png"); */
+  background-image: url("https://i.imgur.com/R6pinb3.png");
   background-size: cover;
   width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  height: 65px;
   cursor: pointer;
 }
 
