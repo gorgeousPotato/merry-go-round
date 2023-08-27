@@ -165,10 +165,25 @@ header > img {
 /* MAP */
 
 .marker {
-  background-image: url("https://i.imgur.com/0UV6RQc.png");
+  background-image: url("https://i.imgur.com/hjECJnQ.png");
   background-size: cover;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* IMAGES PAGE */
+
+.pg-img {
+  width: 50%;
 }

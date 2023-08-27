@@ -26,6 +26,30 @@ const reviewSchema = new Schema(
   }
 );
 
+const photoSchema = new Schema(
+  {
+    title: {
+      type: String,
+      required: true,
+      default: "Photo",
+    },
+    img: {
+      data: Buffer,
+      contentType: String,
+    },
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+    userName: String,
+    userAvatar: String,
+  },
+  {
+    timestamps: true,
+  }
+);
+
 const playgroundSchema = new Schema(
   {
     title: {
@@ -56,7 +80,7 @@ const playgroundSchema = new Schema(
     lat: String,
     lon: String,
     reviews: [reviewSchema],
-    // photos: [photoSchema],
+    photos: [photoSchema],
   },
   {
     timestamps: true,

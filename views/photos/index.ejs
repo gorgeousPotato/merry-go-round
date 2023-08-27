@@ -1,0 +1,43 @@
+<%- include("../partials/header") %>
+
+<h2 class="title"><%= playground.title %> photos</h2>
+<div class="photos-page">
+  <% if (user) {%>
+  <form
+    action="/playgrounds/<%= playground._id %>/photos"
+    method="POST"
+    enctype="multipart/form-data"
+  >
+    <label>Image title</label>
+    <input type="text" value="photo" placeholder="title" name="title" />
+    <br />
+    <label>Upload Image</label>
+    <input type="file" name="image" required />
+    <br />
+    <input type="submit" value="Add Photo" />
+  </form>
+  <% } %>
+
+  <% if (playground.photos.length) { %>
+    <div>
+      <% playground.photos.forEach(photo => {%> 
+        <img class="pg-img"
+        src="data:image/<%=photo.img.contentType%>;base64,
+                <%=photo.img.data.toString('base64')%>"/>
+      <br>
+      <div class="review-user"> 
+        <img alt="avatar" src="<%= photo.userAvatar %>"  referrerpolicy="no-referrer"/>
+        <p><%= photo.userName %></p>
+        <p>-</p>
+        <p><%= photo.createdAt.toLocaleDateString() %></p>
+      </div>
+      
+      <% }) %>
+    </div>
+    <% } else { %> 
+      <h3>No Reviews Yet</h3>
+    <% } %>
+</div>
+
+  <%- include("../partials/footer") %>
+</div>
