@@ -1,31 +1,71 @@
 <%- include("../partials/header") %>
 <h1 class="title"><%= title %></h1>
-<form action="/playgrounds" method="POST">
-  <label>Name</label>
-  <input type="text" name="title" />
-  <br />
-  <label>Minumum Age</label>
-  <input type="number" min="0" name="minAge" />
-  <br />
-  <label>Slides</label>
-  <input type="checkbox" name="slides" />
-  <br />
-  <label>Swings</label>
-  <input type="checkbox" name="swings" />
-  <br />
-  <label>Sandbox</label>
-  <input type="checkbox" name="sandbox" />
-  <br />
-  <label>Spraypark</label>
-  <input type="checkbox" name="spraypark" />
-  <br />
-  <label>Lat - for now manual</label>
-  <input type="number" name="lat" />
-  <br />
-  <label>Lon - for now manual</label>
-  <input type="number" name="lon" />
-  <br />
-  <button type="submit">SAVE</button>
-</form>
+<div class="first-page">
+  <form action="/playgrounds" method="POST">
+    <label>Name</label>
+    <input type="text" name="title" />
+    <br />
+    <label>Minumum Age</label>
+    <input type="number" min="0" name="minAge" />
+    <br />
+    <label>Slides</label>
+    <input type="checkbox" name="slides" />
+    <br />
+    <label>Swings</label>
+    <input type="checkbox" name="swings" />
+    <br />
+    <label>Sandbox</label>
+    <input type="checkbox" name="sandbox" />
+    <br />
+    <label>Spraypark</label>
+    <input type="checkbox" name="spraypark" />
+    <br />
+    <label>Lat - will hide this</label>
+    <input type="text" name="lat" id="lat"/>
+    <br />
+    <label>Lon - will hide this</label>
+    <input type="text" name="lon" id="lon"/>
+    <br />
+    <button type="submit">SAVE</button>
+  </form>
+  <div class="all-pg-map">
+    <div id="map" style="width: 30rem; height: 40rem"></div>
+    <script type="text/javascript">
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoiYmVhdXRpZnVscG90YXRvIiwiYSI6ImNsbHF0cXVwbzA0bWczc3N5YWM3OG4zMDMifQ.Tw_QZOJgFO36cVeypud_QQ";
+      const map = new mapboxgl.Map({
+        container: "map", // container ID
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: "mapbox://styles/mapbox/streets-v12", // style URL
+        center: [42, 42], // starting center in [lng, lat]
+        zoom: 1, // starting zoom
+      });
+
+      // Add geolocate control to the map.
+      map.addControl(
+        new mapboxgl.GeolocateControl({
+          positionOptions: {
+            enableHighAccuracy: true,
+          },
+          // When active the map will receive updates to the device's location as it changes.
+          trackUserLocation: true,
+          // Draw an arrow next to the location dot to indicate which direction the device is heading.
+          showUserHeading: true,
+        })
+      );
+      const marker = new mapboxgl.Marker();
+
+      function add_marker (event) {
+        const coordinates = event.lngLat;
+        // console.log('Lng:', coordinates.lng, 'Lat:', coordinates.lat);
+        document.getElementById("lat").value = coordinates.lat;
+        document.getElementById("lon").value = coordinates.lng;
+        marker.setLngLat(coordinates).addTo(map);
+      }
+
+      map.on('click', add_marker);
+    </script>
+</div>
+
 
 <%- include("../partials/footer") %>
