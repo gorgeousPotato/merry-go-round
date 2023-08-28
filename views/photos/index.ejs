@@ -18,9 +18,9 @@
   </form>
   <% } %>
 
-  <% if (playground.photos.length) { %>
+  <% if (photos.length) { %>
     <div>
-      <% playground.photos.forEach(photo => {%> 
+      <% photos.forEach(photo => {%> 
         <img class="pg-img"
         src="data:image/<%=photo.img.contentType%>;base64,
                 <%=photo.img.data.toString('base64')%>"/>
@@ -35,7 +35,7 @@
       <% }) %>
     </div>
     <% } else { %> 
-      <h3>No Reviews Yet</h3>
+      <h3>No Photos Yet</h3>
     <% } %>
 </div>
 

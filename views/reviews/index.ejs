@@ -1,5 +1,5 @@
 <%- include("../partials/header") %>
-<h2 class="title"><%= playground.title %> reviews</h2>
+<h2 class="title"><%= playground.title %> playground reviews</h2>
 <div class="reviews-page">
   <% if (user) {%>
     <form action="/playgrounds/<%= playground._id %>/reviews" method="POST" class="review-form">
