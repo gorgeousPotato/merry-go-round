@@ -34,6 +34,10 @@ const playgroundSchema = new Schema(
       type: String,
       required: true,
     },
+    description: {
+      type: String,
+      required: true,
+    },
     minAge: {
       type: Number,
       required: true,
@@ -61,7 +65,14 @@ const playgroundSchema = new Schema(
     photos: {
       type: Schema.Types.ObjectId,
       ref: 'Photo',
-    }
+    },
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+    userName: String,
+    userAvatar: String,
   },
   {
     timestamps: true,

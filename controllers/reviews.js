@@ -4,6 +4,8 @@ module.exports = {
   index,
   create,
   delete: deleteReview,
+  // edit,
+  // update,
 };
 
 async function index(req, res) {
@@ -38,3 +40,31 @@ async function deleteReview(req,res) {
   await playground.save()
   res.redirect(`/playgrounds/${playground._id}/reviews`)
 }
+
+// async function edit(req,res) {
+//   const playground = await Playground.findOne({
+//     'reviews._id': req.params.id,
+//     'reviews.user': req.user._id
+//   });
+//   const review = playground.reviews.id(req.params.id);
+//   res.render("reviews/edit", {
+//     title: "Edit review",
+//     review,
+//   });
+// }
+
+// async function update(req,res) {
+//   const playground = await Playground.findOne({
+//     'reviews._id': req.params.id,
+//     'reviews.user': req.user._id
+//   });
+//   const review = playground.reviews.id(req.params.id);
+//   await Playground.findOneAndUpdate(
+//     {"_id": playground._id, "reviews._id": review._id},
+//     {"$set": {
+//       "reviews.content": req.body.content
+//     }}
+//   )
+//   res.redirect(`/playgrounds/${playground._id}/reviews`);
+// }
+ 

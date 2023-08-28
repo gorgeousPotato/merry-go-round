@@ -12,4 +12,10 @@ router.post("/playgrounds/:id/reviews", ensureLoggedIn, reviewsCtrl.create);
 //DELETE /reviews/:id
 router.delete("/reviews/:id", ensureLoggedIn, reviewsCtrl.delete);
 
+// //GET /reviews/:id/edit
+// router.get("/reviews/:id/edit", ensureLoggedIn, reviewsCtrl.edit);
+
+// //PUT /reviews/:id?_method=PUT
+// router.put("/reviews/:id", ensureLoggedIn, reviewsCtrl.update)
+
 module.exports = router;

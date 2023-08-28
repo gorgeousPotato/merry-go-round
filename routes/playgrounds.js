@@ -9,12 +9,18 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 router.get("/", playgroundsCtrl.index);
 
 //GET /playgrounds/new
-router.get("/new", playgroundsCtrl.new);
+router.get("/new", ensureLoggedIn, playgroundsCtrl.new);
 
 // GET /playgrounds/:id
 router.get("/:id", playgroundsCtrl.show);
 
 //POST /playgrounds
 router.post("/", playgroundsCtrl.create);
+
+//GET /playgrounds/:id/edit
+router.get("/:id/edit", ensureLoggedIn, playgroundsCtrl.edit)
+
+//PUT /playgrounds/:id
+router.put("/:id", ensureLoggedIn, playgroundsCtrl.update);
 
 module.exports = router;

@@ -23,6 +23,7 @@
       <h4>Review</h4>
       <h4>Rating</h4>
       <div></div>
+      <!-- <div></div> -->
       <% let total=0 %> 
       <% playground.reviews.forEach(review => {%> 
       <% total += review.rating %>
@@ -35,7 +36,7 @@
       <p><%= review.rating %></p>
       <% if (user?._id.equals(review.user)) { %>
         <form class="flex-center" action="/reviews/<%= review._id %>?_method=DELETE" method="POST"> 
-          <button type="submit">X</button>
+          <button type="submit" class="delete-button">X</button>
         </form>
       <% } else { %>
         <div></div>

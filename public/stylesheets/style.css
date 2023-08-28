@@ -187,6 +187,34 @@ header > img {
   
 }
 
+.delete-button {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #edf4e2;
+  color: #821630;
+}
+
+.delete-button:hover {
+  background-color: #da8196;
+  color: #edf4e2;
+}
+
+/* .edit-button {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: none;
+  text-decoration: none;
+  background-color: #edf4e2;
+  text-align: center;
+}
+
+.edit-button:hover {
+  background-color: #da8196;
+} */
+
 .reviews-page {
   margin-left: 8rem;
 
@@ -198,6 +226,8 @@ header > img {
   display: grid;
   grid-template-columns: 3fr 2fr 6fr 1fr 1fr;
   gap: 1rem;
+  justify-items: start;
+  align-items: center;
 }
 
 .review-user {
