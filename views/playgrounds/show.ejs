@@ -5,13 +5,13 @@
   <div class="all-pg-page">
     <p><%=playground.description%></p>
     <p>Minimum age: <%= playground.minAge %></p>
-    <h2 class="subtitle">Equipment:</h2>
+    <h2 class="subtitle">Equipment</h2>
     <div class="equip-table">
       <p>Slides</p>
       <p><%= playground.slides ? 'Yes' : 'No' %></p>
       <p>Swings</p>
       <p><%= playground.swings ? 'Yes' : 'No' %></p>
-      <p>Sandxbox</p>
+      <p>Sandbox</p>
       <p><%= playground.sandbox ? 'Yes' : 'No' %></p>
       <p>Spraypark</p>
       <p><%= playground.spraypark ? 'Yes' : 'No' %></p>
@@ -25,14 +25,14 @@
     <% } %>
   </div>
   <div class="all-pg-map">
-    <!-- <div id="map" style="width: 40rem; height: 30rem"></div>
+    <div id="map" style="width: 40rem; height: 30rem"></div>
     <script src="/javascript/map-show.js"></script>
     <script>
       const lat = "<%-playground.lat%>";
       const lon = "<%-playground.lon%>";
       const title = "<%-playground.title%>";
       showingMap(lat,lon,title)
-    </script> -->
+    </script>
   </div>
   </div>
 

@@ -162,6 +162,11 @@ h3 {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, auto);
   gap: 1rem;
+  margin-top: 2rem;
+}
+
+.equip-table p {
+  margin-bottom: 0;
 }
 
 .subtitle {
@@ -238,12 +243,17 @@ h3 {
 
 .reviews-table {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   width: 90%;
   display: grid;
   grid-template-columns: 3fr 2fr 6fr 1fr 1fr;
   gap: 1rem;
   justify-items: start;
   align-items: center;
+}
+
+.reviews-table p {
+  margin-bottom: 0;
 }
 
 .review-user {
@@ -255,6 +265,10 @@ h3 {
 .review-user img {
   border-radius: 50%;
   height: 40px;
+}
+
+.reviews-page h4 {
+  margin-top:2rem;
 }
 
 /* MAP */
