@@ -11,10 +11,13 @@ module.exports = {
 async function index(req, res) {
   const playground =  await Playground.findById(req.params.id).populate('photos');
   const photos = await Photo.find({playground: req.params.id});
+  const firstPhoto = photos.splice(0, 1)[0];
+  console.log(firstPhoto);
   res.render("photos/index", {
     title: "Photos",
     playground,
     photos,
+    firstPhoto,
   });
 }
 
