@@ -1,38 +1,30 @@
 <%- include("../partials/header") %>
+<a href="/playgrounds" class="back"> ←Back </a>
 <h1 class="title"><%= title %></h1>
 <div class="first-page">
-  <form action="/playgrounds" method="POST">
+  <form action="/playgrounds" method="POST" class="new-form">
     <label>Name</label>
-    <input type="text" name="title" />
-    <br />
+    <input type="text" name="title" size="40"/>
     <label>Description</label> 
     <textarea name="description" rows="2" cols="40"></textarea> 
-    <br>
     <label>Minumum Age</label>
-    <input type="number" min="0" name="minAge" />
-    <br />
+    <input type="number" min="0" name="minAge" size="40"/>
     <label>Slides</label>
     <input type="checkbox" name="slides" />
-    <br />
     <label>Swings</label>
     <input type="checkbox" name="swings" />
-    <br />
     <label>Sandbox</label>
     <input type="checkbox" name="sandbox" />
-    <br />
     <label>Spraypark</label>
     <input type="checkbox" name="spraypark" />
-    <br />
     <label>Lat - will hide this</label>
     <input type="text" name="lat" id="lat"/>
-    <br />
     <label>Lon - will hide this</label>
     <input type="text" name="lon" id="lon"/>
-    <br />
-    <button type="submit">SAVE</button>
+    <button type="submit" class="submit-btn">SAVE</button>
   </form>
   <div class="all-pg-map">
-    <div id="map" style="width: 30rem; height: 40rem"></div>
+    <div id="map" style="width: 40rem; height: 30rem"></div>
     <script src="/javascript/map-new.js"></script>
     
 </div>

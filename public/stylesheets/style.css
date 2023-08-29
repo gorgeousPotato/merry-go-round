@@ -7,9 +7,7 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  /* background: url("https://i.imgur.com/DwefNwp.png") no-repeat center center
-    fixed;
-  background-size: cover; */
+  /* background-color: #f1fcfc; */
   background-color: #bde6e6;
 }
 
@@ -35,10 +33,26 @@ header > a:hover {
   color: #821630;
 } */
 
-header > img {
+.back {
+  color: #821630;
+  text-decoration: none;
+  margin-left: 8rem;
+}
+
+.back:hover {
+  color: #da8196;
+}
+
+
+
+.logo-img {
   width: 15rem;
   object-fit: contain;
   margin-right: auto;
+}
+
+.logo-img img {
+  width: 15rem;
 }
 
 .login {
@@ -60,11 +74,16 @@ header > img {
 }
 
 .title {
-  margin-left: 8rem;
+  margin: 2rem auto 3rem 8rem;
   font-family: "Moul";
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: #821630;
   letter-spacing: 2px;
+}
+
+h3 {
+  margin-left: 8rem;
+  margin-top: 4rem;
 }
 
 /* HERO SCREEN */
@@ -111,9 +130,11 @@ header > img {
 /* FIRST PAGE */
 
 .first-page {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: start;
+  margin-left: 8rem;
+  margin-right: 2rem;
 }
 
 .first-page a {
@@ -129,6 +150,11 @@ header > img {
   align-self: flex-start;
 }
 
+.names {
+  font-size: 1.4rem;
+}
+
+
 /* SHOW PAGE */
 
 .equip-table {
@@ -136,6 +162,10 @@ header > img {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, auto);
   gap: 1rem;
+}
+
+.subtitle {
+  margin-top: 2rem;
 }
 
 /* REVIEWS PAGE */
@@ -176,7 +206,7 @@ header > img {
   text-decoration: none;
   font-family: "Poppins";
   font-size: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   text-align: center;
   padding: 0.4rem 3rem;
 }
@@ -200,20 +230,6 @@ header > img {
   background-color: #da8196;
   color: #edf4e2;
 }
-
-/* .edit-button {
-  height: 2rem;
-  width: 2rem;
-  border-radius: 50%;
-  border: none;
-  text-decoration: none;
-  background-color: #edf4e2;
-  text-align: center;
-}
-
-.edit-button:hover {
-  background-color: #da8196;
-} */
 
 .reviews-page {
   margin-left: 8rem;
@@ -256,8 +272,12 @@ header > img {
 }
 
 .mapboxgl-popup-content {
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+}
+
+.all-pg-map {
+  align-self: start;
 }
 
 /* IMAGES PAGE */
@@ -265,3 +285,81 @@ header > img {
 .pg-img {
   width: 50%;
 }
+
+.photo-form {
+  margin-top: 2rem;
+  margin-left: 8rem;
+}
+
+.photo-input{
+  border-radius: 2px;
+  border: none;
+  background-color: #edf4e2;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom:1rem;
+  color: #0b0103;
+}
+
+.photo-input:focus {
+  background-color: #fceff2;
+  border: none;
+}
+
+.photo-form label {
+  font-size: 1rem;
+  color:#0b0103
+}
+
+.form-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: start;
+  width: 30%;
+}
+
+/* NEW PAGE  */
+
+.new-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: start;
+  align-items: center;
+  width: 60%;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.new-form textarea {
+  border-radius: 2px;
+  border: none;
+  background-color: #edf4e2;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #0b0103
+}
+
+.new-form textarea:focus {
+  background-color: #fceff2;
+  border: none;
+}
+
+.new-form input {
+  border-radius: 2px;
+  border: none;
+  background-color: #edf4e2;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #0b0103
+}
+
+.new-form input:focus {
+  background-color: #fceff2;
+  border: none;
+}
+
+.hero-screen-bg {
+  background: url("https://i.imgur.com/DwefNwp.png") no-repeat center center fixed;
+  background-size: cover;
+}
+

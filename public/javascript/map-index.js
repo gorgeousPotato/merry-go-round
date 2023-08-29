@@ -6,7 +6,7 @@ const showingMap = function(playgrounds) {
           // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
           style: "mapbox://styles/mapbox/streets-v12", // style URL
           center: [42, 42], // starting center in [lng, lat]
-          zoom: 3, // starting zoom
+          zoom: 1, // starting zoom
         });
   
         // Add geolocate control to the map.
@@ -34,8 +34,8 @@ const showingMap = function(playgrounds) {
               coordinates: [playground.lon, playground.lat],
             },
             properties: {
-              title: 'Playground',
-              description: playground.title,
+              title: playground.title,
+              link: `/playgrounds/${playground._id}`,
             },
           };
           geojson.features.push(feature);
@@ -48,7 +48,7 @@ const showingMap = function(playgrounds) {
           .setPopup(
               new mapboxgl.Popup({ offset: 25 }) // add popups
                 .setHTML(
-                  `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+                  `<h4>${feature.properties.title}</h3><a href="${feature.properties.link}">see more</a>`
                 )
             )
           .addTo(map);

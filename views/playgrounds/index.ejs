@@ -5,18 +5,18 @@
   
   <div class="all-pg-page">
     <% playgrounds.forEach(pg => { %>
-    <h2><a href="/playgrounds/<%= pg._id %>"><%= pg.title %></a></h2>
+    <h2><a class="names" href="/playgrounds/<%= pg._id %>"><%= pg.title %></a></h2>
     <%}) %>
   </div>
   
   <div class="all-pg-map">
-    <div id="map" style="width: 30rem; height: 40rem"></div>
+    <!-- <div id="map" style="width: 40rem; height: 30rem"></div>
     <script src="/javascript/map-index.js"></script>
     <script>
       const pgs =  `<%- JSON.stringify(playgrounds)%>`;
       const playgrounds = JSON.parse(pgs);
       showingMap(playgrounds);
-    </script>
+    </script> -->
   </div>
 
 </div>
