@@ -1,6 +1,5 @@
-const showingMap = function(lat, lon, title) {
-  mapboxgl.accessToken =
-  "pk.eyJ1IjoiYmVhdXRpZnVscG90YXRvIiwiYSI6ImNsbHF0cXVwbzA0bWczc3N5YWM3OG4zMDMifQ.Tw_QZOJgFO36cVeypud_QQ";
+const showingMap = function(lat, lon, title, token) {
+  mapboxgl.accessToken = token;
   const map = new mapboxgl.Map({
   container: "map", // container ID
   // Choose from Mapbox's core styles, or make your own style with Mapbox Studio

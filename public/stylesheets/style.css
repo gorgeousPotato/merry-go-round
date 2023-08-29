@@ -148,10 +148,13 @@ h3 {
 
 .all-pg-page {
   align-self: flex-start;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
 }
 
 .names {
-  font-size: 1.4rem;
+  font-size: 1rem;
+  margin-right: 2rem;
 }
 
 

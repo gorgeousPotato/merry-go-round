@@ -13,9 +13,10 @@
     <div id="map" style="width: 40rem; height: 30rem"></div>
     <script src="/javascript/map-index.js"></script>
     <script>
+      const token = "<%- token %>";
       const pgs =  `<%- JSON.stringify(playgrounds)%>`;
       const playgrounds = JSON.parse(pgs);
-      showingMap(playgrounds);
+      showingMap(playgrounds, token);
     </script>
   </div>
 

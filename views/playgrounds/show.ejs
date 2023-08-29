@@ -28,10 +28,11 @@
     <div id="map" style="width: 40rem; height: 30rem"></div>
     <script src="/javascript/map-show.js"></script>
     <script>
+      const token = "<%-token%>"
       const lat = "<%-playground.lat%>";
       const lon = "<%-playground.lon%>";
       const title = "<%-playground.title%>";
-      showingMap(lat,lon,title)
+      showingMap(lat,lon,title,token)
     </script>
   </div>
   </div>

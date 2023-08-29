@@ -14,11 +14,15 @@ async function index(req, res) {
   res.render("playgrounds/index", {
     title: "All Playgrounds",
     playgrounds,
+    token: process.env.MAPBOX,
   });
 }
 
 function newPlayground(req, res) {
-  res.render("playgrounds/new", { title: "Add a Playground" });
+  res.render("playgrounds/new", { 
+    title: "Add a Playground",
+    token: process.env.MAPBOX,
+  });
 }
 
 async function create(req, res) {
@@ -46,6 +50,7 @@ async function show(req, res) {
   res.render("playgrounds/show", {
     title: "Playground Details",
     playground,
+    token: process.env.MAPBOX,
   });
 }
 
@@ -53,6 +58,7 @@ async function edit(req,res) {
   const playground = await Playground.findById(req.params.id);
   res.render("playgrounds/edit", {
     title: "Edit Playground",
+    token: process.env.MAPBOX,
     playground,
   })
 }
