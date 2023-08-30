@@ -25,6 +25,7 @@
       <a href="/playgrounds/new"	<%- title === 'Add Playground' ? 'class="active"' : '' %>>
       Add Playground</a>
       <a href="/logout">LOG OUT</a>
+      <img alt="avatar" class="avatar" src="<%= user.avatar %>"  referrerpolicy="no-referrer"/>
     <% } else { %>
       <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
     <% } %>

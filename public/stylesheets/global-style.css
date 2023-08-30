@@ -8,7 +8,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   /* background-color: #f1fcfc; */
-  background-color: #bde6e6;
+  background-color: #d0efef;
 }
 
 header {
@@ -91,4 +91,9 @@ h3 {
 
 .hidden {
   display: none;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 40px;
 }
