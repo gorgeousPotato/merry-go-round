@@ -1,25 +1,30 @@
-<%- include("../partials/header") %>
-
+<%- include("../partials/header") %> <% if (user) { %>
+<h5 class="welcome-msg">Welcome <%=user.name%>!</h5>
+<% } else { %>
+<h5 class="welcome-msg">
+  Welcome guest! Click <a href="/auth/google">here</a> to login
+</h5>
+<% } %>
 <h1 class="title"><%= title %></h1>
 <div class="first-page">
-  
   <div class="all-pg-page">
     <% playgrounds.forEach(pg => { %>
-    <h2><a class="names" href="/playgrounds/<%= pg._id %>"><%= pg.title %></a></h2>
+    <h2>
+      <a class="names" href="/playgrounds/<%= pg._id %>"><%= pg.title %></a>
+    </h2>
     <%}) %>
   </div>
-  
+
   <div class="all-pg-map">
     <div id="map" style="width: 40rem; height: 30rem"></div>
     <script src="/javascript/map-index.js"></script>
     <script>
       const token = "<%- token %>";
-      const pgs =  `<%- JSON.stringify(playgrounds)%>`;
+      const pgs = `<%- JSON.stringify(playgrounds)%>`;
       const playgrounds = JSON.parse(pgs);
       showingMap(playgrounds, token);
     </script>
   </div>
-
 </div>
 
 <%- include("../partials/footer") %>

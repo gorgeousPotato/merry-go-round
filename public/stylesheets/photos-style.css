@@ -1,0 +1,57 @@
+/* IMAGES PAGE */
+
+.pg-img {
+  width: 50%;
+}
+
+.photo-form {
+  margin-top: 2rem;
+  margin-left: 8rem;
+}
+
+.photo-input {
+  border-radius: 2px;
+  border: none;
+  background-color: #edf4e2;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
+  color: #0b0103;
+}
+
+.photo-input:focus {
+  background-color: #fceff2;
+  border: none;
+}
+
+.photo-form label {
+  font-size: 1rem;
+  color: #0b0103;
+}
+
+.form-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: start;
+  width: 30%;
+}
+
+.carousel {
+  margin-top: 2rem;
+  margin-left: 8rem;
+  width: 50%;
+}
+
+.carousel-inner {
+  height: 25rem;
+}
+
+.carousel-item {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  bottom: 0;
+}

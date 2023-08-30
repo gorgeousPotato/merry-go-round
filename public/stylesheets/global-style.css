@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  /* background-color: #f1fcfc; */
+  background-color: #bde6e6;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  /* background-color: #bde6e6; */
+  background-color: #b2dbdb;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
+  margin-bottom: 3rem;
+}
+
+header > a {
+  margin: 10px;
+  color: #821630;
+  text-decoration: none;
+  padding: 10px;
+}
+
+header > a:hover {
+  color: #da8196;
+}
+
+/* header > a.active {
+  color: #821630;
+} */
+
+.back {
+  color: #821630;
+  text-decoration: none;
+  margin-left: 8rem;
+}
+
+.back:hover {
+  color: #da8196;
+}
+
+.logo-img {
+  width: 25rem;
+  object-fit: contain;
+  margin-right: auto;
+}
+
+.logo-img img {
+  width: 18rem;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+}
+
+.login img {
+  height: 30px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.title {
+  margin: 2rem auto 2rem 8rem;
+  font-family: "Moul";
+  font-size: 2.4rem;
+  color: #821630;
+  letter-spacing: 2px;
+}
+
+h3 {
+  margin-left: 8rem;
+  margin-top: 4rem;
+}
+
+.hidden {
+  display: none;
+}

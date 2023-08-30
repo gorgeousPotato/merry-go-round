@@ -20,6 +20,7 @@ router.get("/playgrounds/:id/photos", photosCtrl.index);
 //POST /playgrounds/:id/photos
 router.post(
   "/playgrounds/:id/photos",
+  ensureLoggedIn,
   upload.single("image"),
   photosCtrl.create
 );
