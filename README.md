@@ -57,7 +57,7 @@ Merry-Go-Round is an application designed for parents to easily locate nearby pl
 
 ## Getting Started
 
-[Merry-Go-Round - find your playground](https://)
+[Merry-Go-Round - find your playground](https://merrygoround-35cce2c39443.herokuapp.com/)
 
 ## Next Steps
 
