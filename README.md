@@ -26,13 +26,13 @@ Merry-Go-Round is an application designed for parents to easily locate nearby pl
 
 6. Clicking on the geolocation button on the map will recenter the map to your current location, ensuring both your geolocation and the playground's location are visible. Above the map, you can observe the distance to the playground. Some playground may be close to you...
 
-![alt text](https://github.com/gorgeousPotato/merry-go-round/blob/main/public/images/screenshots/4.png "Distance - close")
+![alt text](https://github.com/gorgeousPotato/merry-go-round/blob/main/public/images/screenshots/4.png "Show page - 1")
 
 7. ...others may be on the other side of the Earth.
 
-![alt text](https://github.com/gorgeousPotato/merry-go-round/blob/main/public/images/screenshots/5.png "Distance - far")
+![alt text](https://github.com/gorgeousPotato/merry-go-round/blob/main/public/images/screenshots/5.png "Show page - 2")
 
-8. Clicking the "Reviews" button will lead you to a page where reviews are displayed. While you can read all existing reviews, the ability to write new reviews is restricted to users who are logged in. Additionally, users have the option to delete their own reviews if needed.
+8. Clicking the "Reviews" button will lead you to a page where reviews are displayed. While you can read all existing reviews, you can write reviews only when you're logged in. Additionally, users have the option to delete their own reviews if needed.
 
 ![alt text](https://github.com/gorgeousPotato/merry-go-round/blob/main/public/images/screenshots/6.png "Reviews")
 
